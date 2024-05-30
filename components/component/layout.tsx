@@ -75,7 +75,7 @@ export function Layout() {
               <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Projects</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Past Work</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Check out some of the projects I've worked on and the technologies I've used.
+               권상헌의 포트폴리오
               </p>
             </div>
           </div>
