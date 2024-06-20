@@ -32,15 +32,15 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-[100vh]">
+    <div className="flex flex-col min-h-[100dvh]">
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 flex items-center justify-center">
         <div className="w-full max-w-6xl px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">SangHeon Kwon</h1>
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Kwon Sangheon</h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  PM working in the Artificial Intelligence industry and as a game designer.
+                PM in the Artificial Intelligence industry and also a game designer.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -58,7 +58,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <Image
+            <img
               alt="John Doe"
               className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
               height="550"
@@ -72,10 +72,10 @@ export default function Home() {
         <div className="w-full max-w-6xl px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800 text-gray-300">Projects</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">My Past Work</h2>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Sangheon&apos;s Portfolio
+              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800 text-black-100">Projects</div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-black-300">My Past Work</h2>
+              <p className="max-w-[900px] text-black-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-black-500">
+                Sangheon's Portfolio
               </p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
                 <CardDescription>Game and Application development</CardDescription>
               </CardHeader>
               <CardContent>
-                <Image
+                <img
                   alt="C# Development"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
@@ -98,10 +98,10 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>AI Planning and Form creation</CardTitle>
-                <CardDescription>Writing Proposals related to various AI Voucher Projects</CardDescription>
+                <CardDescription>Writing proposals for various AI voucher projects</CardDescription>
               </CardHeader>
               <CardContent>
-                <Image
+                <img
                   alt="AI Planning and Form creation"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
@@ -113,10 +113,10 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>Data Voucher Business</CardTitle>
-                <CardDescription>Collaboration with Korea Data Industry Promotion Agency</CardDescription>
+                <CardDescription>Collaborating with the Korea Data Industry Promotion Agency</CardDescription>
               </CardHeader>
               <CardContent>
-                <Image
+                <img
                   alt="Data Voucher"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
@@ -128,10 +128,10 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>Game Director</CardTitle>
-                <CardDescription>Game development and Game planning using Unity 2D</CardDescription>
+                <CardDescription>Game development and planning using Unity 2D</CardDescription>
               </CardHeader>
               <CardContent>
-                <Image
+                <img
                   alt="Chatbot Application"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
@@ -164,7 +164,7 @@ export default function Home() {
               <DatabaseIcon className="h-12 w-12 text-gray-500 dark:text-gray-400" />
               <h3 className="text-xl font-bold">Prompt Engineer</h3>
               <p className="text-gray-500 dark:text-gray-400">
-                Design optimal input sentences to obtain accurate and useful output for artificial intelligence models
+              Designing optimal input sentences to get accurate and useful outputs from AI models
               </p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
@@ -214,7 +214,7 @@ export default function Home() {
           onClick={scrollToTop}
           className="fixed bottom-5 right-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white hover:bg-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900"
         >
-          <Image src="/path-to-image.png" alt="Go to Top" width={24} height={24} />
+          ↑
         </button>
       )}
     </div>
