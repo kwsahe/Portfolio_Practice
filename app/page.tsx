@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card";
@@ -7,6 +10,27 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const [showTopBtn, setShowTopBtn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 flex items-center justify-center">
@@ -27,7 +51,7 @@ export default function Home() {
                   View Projects
                 </Link>
                 <Link
-                  className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300 dark:border-gray-800"
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300 dark:border-gray-800 text-gray-500"
                   href="#"
                 >
                   Contact Me
@@ -48,10 +72,10 @@ export default function Home() {
         <div className="w-full max-w-6xl px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Projects</div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Past Work</h2>
+              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800 text-gray-300">Projects</div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">My Past Work</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Sangheon Portfolio
+                Sangheon's Portfolio
               </p>
             </div>
           </div>
@@ -63,7 +87,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <img
-                  alt="E-commerce Website"
+                  alt="C# Development"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
                   src="/image.png"
@@ -78,7 +102,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <img
-                  alt="Task Management App"
+                  alt="AI Planning and Form creation"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
                   src="/AIphoto1.png"
@@ -88,30 +112,30 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>Personal Blog</CardTitle>
-                <CardDescription>A personal blog built with Next.js, Markdown, and Vercel.</CardDescription>
+                <CardTitle>Data Voucher Business</CardTitle>
+                <CardDescription>Collaboration with Korea Data Industry Promotion Agency</CardDescription>
               </CardHeader>
               <CardContent>
                 <img
-                  alt="Personal Blog"
+                  alt="Data Voucher"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
-                  src="/placeholder.svg"
+                  src="Data.png"
                   width="550"
                 />
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>Chatbot Application</CardTitle>
-                <CardDescription>A chatbot application built with React, Node.js, and Dialogflow.</CardDescription>
+                <CardTitle>Game Director</CardTitle>
+                <CardDescription>Game development and Game planning using Unity 2D</CardDescription>
               </CardHeader>
               <CardContent>
                 <img
                   alt="Chatbot Application"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
-                  src="/placeholder.svg"
+                  src="GameDirector.png"
                   width="550"
                 />
               </CardContent>
@@ -123,10 +147,10 @@ export default function Home() {
         <div className="w-full max-w-6xl px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Skills</div>
+              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-600">Skills</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Technical Abilities</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                I have expertise in a wide range of technologies and tools to deliver high-quality web applications.
+                I have expertise in a variety of technologies and tools to provide game development and AI development.
               </p>
             </div>
           </div>
@@ -138,16 +162,18 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
               <DatabaseIcon className="h-12 w-12 text-gray-500 dark:text-gray-400" />
-              <h3 className="text-xl font-bold">Back-end Development</h3>
+              <h3 className="text-xl font-bold">Prompt Engineer</h3>
               <p className="text-gray-500 dark:text-gray-400">
-                Experienced in Node.js, Express, MongoDB, and SQL databases.
+                Design optimal input sentences to obtain accurate and useful output for artificial intelligence models
               </p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
               <CloudIcon className="h-12 w-12 text-gray-500 dark:text-gray-400" />
-              <h3 className="text-xl font-bold">Deployment and DevOps</h3>
+              <h3 className="text-xl font-bold">
+                Document management and version control
+              </h3>
               <p className="text-gray-500 dark:text-gray-400">
-                Familiar with cloud platforms like AWS, Vercel, and Netlify.
+                Create and manage public documents and manage file versions
               </p>
             </div>
           </div>
@@ -157,7 +183,7 @@ export default function Home() {
         <div className="w-full max-w-6xl px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Contact</div>
+              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-600">Contact</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Feel free to reach out if you have any questions or would like to discuss a project.
@@ -178,11 +204,19 @@ export default function Home() {
                 <Label htmlFor="message">Message</Label>
                 <Textarea className="min-h-[100px]" id="message" placeholder="Enter your message" />
               </div>
-              <Button type="submit">Send Message</Button>
+              <Button type="submit" className="bg-gray-800 text-white hover:bg-gray-900 focus-visible:ring-gray-900">Send Message</Button>
             </form>
           </div>
         </div>
       </section>
+      {showTopBtn && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-5 right-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white hover:bg-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900"
+        >
+          ↑
+        </button>
+      )}
     </div>
   );
 }
