@@ -32,7 +32,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-[100vh]">
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 flex items-center justify-center">
         <div className="w-full max-w-6xl px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -58,7 +58,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <img
+            <Image
               alt="John Doe"
               className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
               height="550"
@@ -75,7 +75,7 @@ export default function Home() {
               <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800 text-gray-300">Projects</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">My Past Work</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Sangheon's Portfolio
+                Sangheon&apos;s Portfolio
               </p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
                 <CardDescription>Game and Application development</CardDescription>
               </CardHeader>
               <CardContent>
-                <img
+                <Image
                   alt="C# Development"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
@@ -101,7 +101,7 @@ export default function Home() {
                 <CardDescription>Writing Proposals related to various AI Voucher Projects</CardDescription>
               </CardHeader>
               <CardContent>
-                <img
+                <Image
                   alt="AI Planning and Form creation"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
@@ -116,7 +116,7 @@ export default function Home() {
                 <CardDescription>Collaboration with Korea Data Industry Promotion Agency</CardDescription>
               </CardHeader>
               <CardContent>
-                <img
+                <Image
                   alt="Data Voucher"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
@@ -131,7 +131,7 @@ export default function Home() {
                 <CardDescription>Game development and Game planning using Unity 2D</CardDescription>
               </CardHeader>
               <CardContent>
-                <img
+                <Image
                   alt="Chatbot Application"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height="310"
@@ -214,7 +214,7 @@ export default function Home() {
           onClick={scrollToTop}
           className="fixed bottom-5 right-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white hover:bg-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900"
         >
-          ↑
+          <Image src="/path-to-image.png" alt="Go to Top" width={24} height={24} />
         </button>
       )}
     </div>
