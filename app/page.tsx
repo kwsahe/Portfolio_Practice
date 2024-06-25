@@ -34,14 +34,21 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 flex items-center justify-center">
+      <nav className="fixed top-0 right-0 z-20 flex gap-4 p-4 bg-gray-300">
+        <Link href="#home" className="inline-flex h-10 items-center justify-center rounded-md bg-gray-700 px-4 text-sm font-medium text-gray-50 hover:bg-gray-600">Main</Link>
+        <Link href="#projects" className="inline-flex h-10 items-center justify-center rounded-md bg-gray-700 px-4 text-sm font-medium text-gray-50 hover:bg-gray-600">Projects</Link>
+        <Link href="#skills" className="inline-flex h-10 items-center justify-center rounded-md bg-gray-700 px-4 text-sm font-medium text-gray-50 hover:bg-gray-600">Skills</Link>
+        <Link href="#contact" className="inline-flex h-10 items-center justify-center rounded-md bg-gray-700 px-4 text-sm font-medium text-gray-50 hover:bg-gray-600">Contact</Link>
+      </nav>
+
+      <section id="home" className="w-full py-12 md:py-24 lg:py-32 xl:py-48 flex items-center justify-center">
         <div className="w-full max-w-6xl px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Kwon Sangheon</h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                A PM in the Artificial Intelligence industry and also a game designer.
+                  A PM in the Artificial Intelligence industry and also a game designer.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -84,7 +91,7 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>C# Development</CardTitle>
-                <CardDescription>Game and Application development</CardDescription>
+                <CardDescription>Game and application development</CardDescription>
               </CardHeader>
               <CardContent>
                 <Image
@@ -98,12 +105,12 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>AI Planning and Form creation</CardTitle>
+                <CardTitle>AI Planning and Form Creation</CardTitle>
                 <CardDescription>Writing proposals for various AI voucher projects</CardDescription>
               </CardHeader>
               <CardContent>
                 <Image
-                  alt="AI Planning and Form creation"
+                  alt="AI Planning and Form Creation"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
                   height={310}
                   src="/AIphoto1.png"
@@ -151,7 +158,7 @@ export default function Home() {
               <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-600">Skills</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Technical Abilities</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                I have expertise in a variety of technologies and tools to provide game development and AI development.
+                I have expertise in a variety of technologies and tools for game development and AI development.
               </p>
             </div>
           </div>
@@ -165,16 +172,16 @@ export default function Home() {
               <DatabaseIcon className="h-12 w-12 text-gray-500 dark:text-gray-400" />
               <h3 className="text-xl font-bold">Prompt Engineer</h3>
               <p className="text-gray-500 dark:text-gray-400">
-              Designing optimal input sentences to get accurate and useful outputs from AI models
+                Designing optimal input sentences to get accurate and useful outputs from AI models
               </p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
               <CloudIcon className="h-12 w-12 text-gray-500 dark:text-gray-400" />
               <h3 className="text-xl font-bold">
-                Document management and version control
+                Document Management and Version Control
               </h3>
               <p className="text-gray-500 dark:text-gray-400">
-                Create and manage public documents and manage file versions
+                Creating and managing public documents and managing file versions
               </p>
             </div>
           </div>
