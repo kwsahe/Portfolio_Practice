@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Head>
-        <title>Sangheon's Portfolio</title> {/* 메타 태그 설정 */}
+        <title>상헌의 포트폴리오</title> {/* 메타 태그 설정 */}
       </Head>
       <nav className="fixed top-0 right-0 z-20 flex gap-4 p-4 bg-gray-300">
         <Link href="#home" className="inline-flex h-10 items-center justify-center rounded-md bg-gray-700 px-4 text-sm font-medium text-gray-50 hover:bg-gray-600">Main</Link>
